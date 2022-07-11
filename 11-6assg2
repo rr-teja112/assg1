@@ -1,0 +1,30 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Jul 11 19:57:00 2022
+
+@author: REDDI RUDHRA TEJA
+"""
+
+n=1000000
+l=[True]*n
+l[0]=l[1]=False
+for i in range(2,1000):
+    if l[i]:
+        for j in range(i*i,n,i):
+            l[j]=False
+n=int(input())
+b=n
+a=0
+if l[n]:
+   print('prime number')
+else:
+   for i in range(2,n+1):
+       if l[i]:
+           while(b!=1):
+               if b%i==0:
+                 b=b//i
+                 a+=1
+               else:
+                   break
+print(a)              
+        
