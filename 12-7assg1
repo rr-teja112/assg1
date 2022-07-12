@@ -1,0 +1,24 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jul 12 19:22:43 2022
+
+@author: REDDI RUDHRA TEJA
+"""
+
+n=10000000
+l=[True]*n
+l[0]=l[1]=False
+for i in range(2,3163):
+    for j in range(i*i,n,i):
+        if l[j]:
+            l[j]=False
+p=[0]*n
+for i in range(1,n):
+    if l[i]:
+        p[i]=p[i-1]+1
+    else:
+        p[i]=p[i-1]
+t=int(input())
+for i in range(t):
+    s=int(input())
+    print(p[s])   
