@@ -9,9 +9,9 @@ n=1000000
 l=[True]*n
 l[0]=l[1]=False
 for i in range(2,1000):
-    for j in range(i*i,n,i):
-        if l[j]:
-            l[j]=False
+    if l[i]:
+       for j in range(i*i,n,i):
+           l[j]=False
 p=[0]*n
 p[0]=2
 for i in range(n):
