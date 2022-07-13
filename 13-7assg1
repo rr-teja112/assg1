@@ -1,0 +1,21 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Jul 13 20:18:44 2022
+
+@author: REDDI RUDHRA TEJA
+"""
+
+class Solution:
+    def subarraySum(self, nums: List[int], k: int) -> int:
+        cnt=0
+        ps=0
+        dic={0:1}
+        for i in nums:
+            ps+=i
+            if ps-k in dic:
+                cnt+=dic[ps-k]
+            if ps not in dic:
+                dic[ps]=1
+            else:
+                dic[ps]+=1
+        return cnt  
