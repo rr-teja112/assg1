@@ -1,0 +1,13 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Jul 14 21:23:17 2022
+
+@author: REDDI RUDHRA TEJA
+"""
+
+a,b=map(int,input().split())
+print(a&b,'AND')
+print(a|b,'OR')
+print(a^b,'XOR')
+print(a<<1,' left shift ',b<<1)
+print(a>>1,' right shift ',b>>1)
