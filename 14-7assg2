@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Jul 14 21:23:19 2022
+
+@author: REDDI RUDHRA TEJA
+"""
+
+l=list(map(int,input().split()))
+a=b=1
+for i in range(len(l)):
+    x=l.count(l[i])
+    if x>a:
+        a=x
+        b=i
+print(l[b])        
